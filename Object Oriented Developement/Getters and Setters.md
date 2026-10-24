@@ -1,3 +1,4 @@
+[[Encapsulation]], [[Getters and Setters]], [[Types]], [[Constructors]]
 Getters and Setters are often used for encapsulation. Getters return some value using a method and setters (also called mutators) set the values of some value within your code. 
 
 For example:
@@ -15,7 +16,6 @@ public class Test{
 	// our setter method which equates a global variable with the local              variable, then sets the local variable to 2, without changing the global         variable
 	public void setNumber(int number){
 		this.number = number;
-		number = 2;
 	}
 	
 }
@@ -32,7 +32,6 @@ public class Test{
 	
 	public void setNumber(int number){
 		this.number = number;
-		number = 2;
 	}
 	
 	public Test(){
@@ -53,4 +52,5 @@ public class Main{
 	
 }
 ```
+
 As you can see we initialise a new Test object and pass in the number 10 with the getNumber method. If it was public we could do something like t.number = 10; BUT since it is private it is only changed in the created object not the template/blueprint of the class.

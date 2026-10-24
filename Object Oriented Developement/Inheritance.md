@@ -1,0 +1,1 @@
+[[Encapsulation]], [[Getters and Setters]], [[Types]], [[Constructors]]

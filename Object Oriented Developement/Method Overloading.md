@@ -1,3 +1,4 @@
+[[Method Overloading]], [[Types]]
 Method overloading is when you want to pass multiple different pieces of data through a method in multiple different ways. Something like:
 ```java
 System.out.println(2);
