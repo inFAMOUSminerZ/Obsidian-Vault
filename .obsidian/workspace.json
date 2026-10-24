@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "356acf4388a09dbc",
+    "type": "split",
+    "children": [
+      {
+        "id": "6181486391559d6c",
+        "type": "tabs",
+        "dimension": 65.1015228426396,
+        "children": [
+          {
+            "id": "f7ba17155e817f7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Object Oriented Developement/Method Overriding.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Method Overriding"
+            }
+          }
+        ]
+      },
+      {
+        "id": "6782c81ba9259ed0",
+        "type": "tabs",
+        "dimension": 34.89847715736041,
+        "children": [
+          {
+            "id": "312ea79b322af345",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ee33337749bdf1fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "b5596eeafdc5e587",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1cb70962266bcd17",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c7722feea3585969",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9e458f806684c9b2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d8792ff7919ca83e",
+    "type": "split",
+    "children": [
+      {
+        "id": "41d66cc116cfe83c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25d64ae2168f4cd1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "7f8425d2d6b17e38",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "88816d64b720201a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "25f1ceeb28bf48f1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5f6a97c1f8b9cb0a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "f7ba17155e817f7b",
+  "lastOpenFiles": [
+    "Object Oriented Developement/Method Overloading.md",
+    "Object Oriented Developement/Inheritance.md",
+    "Object Oriented Developement/Method Overriding.md",
+    "Object Oriented Developement/Constructors.md",
+    "Object Oriented Developement/Getters and Setters..md",
+    "Object Oriented Developement/Encapsulation.md",
+    "Object Oriented Developement/Types.md",
+    "Welcome.md",
+    "Object Oriented Developement"
+  ]
+}
