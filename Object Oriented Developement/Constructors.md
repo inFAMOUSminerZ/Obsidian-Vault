@@ -27,7 +27,9 @@ public class Main{
 	public static void main(String[] args){
 		
 		Test t = new Test(); //This is an initialisation.
+		t.getNumber();
 		t.setNumber(10);
+		t.getNumber();
 	
 	}
 	
