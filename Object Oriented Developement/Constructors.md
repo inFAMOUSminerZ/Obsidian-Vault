@@ -37,3 +37,5 @@ public class Main{
 ```
 
 As you can see we initialise a new Test object and pass in the number 10 with the setNumber method. This only changes the new objects instance variable with setNumber as t is a single object, not the blueprint. It is not the Test class itself.
+
+**NOTE:** Test is now a type.
