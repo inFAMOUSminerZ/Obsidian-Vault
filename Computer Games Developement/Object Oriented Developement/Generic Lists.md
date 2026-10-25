@@ -1,3 +1,4 @@
+[[Types]][[Getters and Setters]]
 The list functionality we will be looking at here is actually a type. We will create it the same way we would create an object in main. Something like the following:
 ```java
 public class Main{
