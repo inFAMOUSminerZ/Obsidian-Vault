@@ -504,7 +504,7 @@
     "colours": {
       "light": {
         "codeblock": {
-          "backgroundColour": "--code-background",
+          "backgroundColour": "#0000FF0F",
           "textColour": "--code-normal"
         },
         "gutter": {

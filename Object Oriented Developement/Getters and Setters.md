@@ -20,7 +20,8 @@ public class Test{
 	
 }
 ```
-to invoke the class to construct an object we need to create a constructor which is something like this:
+
+To invoke the class to construct an object we need to create a constructor which is something like this:
 ```java 
 public class Test{
 
@@ -39,6 +40,7 @@ public class Test{
 	
 }
 ```
+
 And now we add the constructor so that when we add another class with a main method and do the following:
 ```java
 public class Main{

@@ -18,6 +18,7 @@ public class UserExample{
 	
 }
 ```
+
 **Example User Class**
 This is where we define what User means. We have User contain 2 strings that have a name and a membership.
 ```java
@@ -30,6 +31,7 @@ public class User{
 	
 }
 ```
+
 **Changing UserExample**
 Now we set the values within the main method.
 ```java
@@ -54,4 +56,5 @@ public class UserExample{
 	
 }
 ```
+
 **NOTE:** Non-primitives if not defined will return a base value of NULL, while primitives will return a base value of 0.
