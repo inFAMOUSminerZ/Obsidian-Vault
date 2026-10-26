@@ -378,3 +378,142 @@ body .cm-hmd-internal-link:hover {
     color: #2383e2 !important;
     -webkit-text-fill-color: #2383e2 !important;
 }
+/* ===== 15. INLINE CODE: MATCH CODE BLOCKS ===== */
+body {
+    --code-background: rgba(35, 131, 226, 0.07) !important;
+    --code-normal: #1a5cff !important;
+}
+
+/* reading view */
+body .markdown-rendered :not(pre) > code,
+body .markdown-preview-view :not(pre) > code,
+body .markdown-rendered p code,
+body .markdown-rendered li code {
+    background: rgba(35, 131, 226, 0.07) !important;
+    background-color: rgba(35, 131, 226, 0.07) !important;
+    border: 1px solid rgba(35, 131, 226, 0.25) !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    color: #1a5cff !important;
+    -webkit-text-fill-color: #1a5cff !important;
+    padding: 1px 6px !important;
+}
+
+/* editor (live preview / source) */
+body .cm-inline-code,
+body .cm-s-obsidian span.cm-inline-code {
+    background: rgba(35, 131, 226, 0.07) !important;
+    background-color: rgba(35, 131, 226, 0.07) !important;
+    border: 1px solid rgba(35, 131, 226, 0.25) !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    color: #1a5cff !important;
+    padding: 1px 4px !important;
+}
+/* ===== 16. INLINE CODE: STOP OVERLAPPING ===== */
+body .markdown-rendered :not(pre) > code,
+body .markdown-preview-view :not(pre) > code,
+body .markdown-rendered p code,
+body .markdown-rendered li code {
+    padding: 0 5px !important;
+    margin: 0 1px !important;
+    line-height: 1.2 !important;
+    font-size: 0.85em !important;
+    vertical-align: baseline !important;
+    display: inline !important;
+    -webkit-box-decoration-break: clone !important;
+    box-decoration-break: clone !important;
+}
+
+/* a bit more room between lines so boxes can't touch */
+body .markdown-rendered p,
+body .markdown-rendered li {
+    line-height: 1.8 !important;
+}
+/* ===== 17. INLINE CODE SPACING (stronger) ===== */
+body, body.theme-light, .markdown-rendered, .markdown-preview-view {
+    --line-height-normal: 2 !important;
+    --line-height-tight: 1.8 !important;
+    --code-size: 0.82em !important;
+}
+
+html body.theme-light .markdown-rendered :not(pre) > code,
+html body.theme-light .markdown-preview-view :not(pre) > code,
+html body.theme-light .markdown-rendered p > code,
+html body.theme-light .markdown-rendered li > code {
+    display: inline !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    font-size: 0.82em !important;
+    border: none !important;
+    box-shadow: inset 0 0 0 1px rgba(35, 131, 226, 0.25) !important;
+    border-radius: 5px !important;
+}
+
+html body.theme-light .markdown-rendered p,
+html body.theme-light .markdown-rendered li {
+    line-height: 2 !important;
+}
+/* ===== 18. CODE BLOCKS: NORMAL SPACING (editor + reading view) ===== */
+
+/* editor: code lines */
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock,
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock-bg,
+html body.theme-light .cm-editor .cm-line.code-styler-line,
+html body.theme-light .cm-editor .cm-hmd-codeblock {
+    line-height: 1.5 !important;
+    --line-height-normal: 1.5 !important;
+}
+
+/* editor: a little breathing room above and below each block */
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock-begin {
+    padding-top: 10px !important;
+}
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock-end {
+    padding-bottom: 10px !important;
+}
+
+/* reading view: code blocks */
+html body.theme-light .markdown-rendered pre,
+html body.theme-light .markdown-rendered pre code {
+    line-height: 1.5 !important;
+    --line-height-normal: 1.5 !important;
+}
+html body.theme-light .markdown-rendered pre {
+    margin: 12px 0 !important;
+}
+/* ===== 19. CODE BLOCK PADDING + OUTSIDE GAP ===== */
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock-begin {
+    padding-top: 4px !important;
+    margin-top: 10px !important;
+}
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock-end {
+    padding-bottom: 4px !important;
+    margin-bottom: 10px !important;
+}
+/* ===== 20. CODE BLOCK TEXT SIZE ===== */
+html body.theme-light {
+    --code-size: 0.95em !important;
+}
+
+/* editor */
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock,
+html body.theme-light .cm-editor .cm-line.HyperMD-codeblock-bg,
+html body.theme-light .cm-editor .cm-line.code-styler-line,
+html body.theme-light .cm-editor .cm-hmd-codeblock {
+    font-size: 0.95em !important;
+}
+
+/* reading view */
+html body.theme-light .markdown-rendered pre,
+html body.theme-light .markdown-rendered pre code {
+    font-size: 0.95em !important;
+}
+
+/* keep inline code at its smaller size */
+html body.theme-light .markdown-rendered p > code,
+html body.theme-light .markdown-rendered li > code,
+html body.theme-light .markdown-rendered :not(pre) > code {
+    font-size: 0.82em !important;
+}

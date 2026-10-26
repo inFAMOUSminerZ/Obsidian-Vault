@@ -1,0 +1,741 @@
+/*
+ * MinimalistK — tema para Obsidian
+ * Minimalista, limpo e sereno, com azul petróleo (#084D6E) como cor principal.
+ * Modos claro e escuro.
+ *
+ * Autor: M. A. Klippel
+ * GitHub: https://github.com/miqueiasklippel
+ * Licença: MIT
+ */
+
+/* @settings
+
+name: MinimalistK
+id: minimalistk
+settings:
+    -
+        id: mk-heading-accent
+        title: Títulos em azul petróleo
+        description: Aplica a cor principal do tema aos títulos (H1 a H3).
+        type: class-toggle
+        default: true
+    -
+        id: mk-h1-rule
+        title: Linha sob o título principal
+        description: Exibe um traço fino abaixo dos títulos H1.
+        type: class-toggle
+        default: true
+    -
+        id: mk-focus-mode
+        title: Modo foco
+        description: Atenua as barras laterais e a barra de status até que o ponteiro passe sobre elas.
+        type: class-toggle
+        default: false
+    -
+        id: mk-line-width
+        title: Largura da linha de leitura
+        description: Largura máxima do texto quando a opção "Limitar largura da linha" está ativa.
+        type: variable-number-slider
+        default: 44
+        min: 34
+        max: 60
+        step: 1
+        format: rem
+    -
+        id: mk-radius
+        title: Arredondamento dos cantos
+        description: Raio dos cantos de botões, blocos de código, chamadas e cartões.
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 16
+        step: 1
+        format: px
+*/
+
+/* ================================================================
+   1. Fundamentos comuns aos dois modos
+   ================================================================ */
+
+body {
+  /* Cor principal: #084D6E = hsl(199, 87%, 23%) */
+  --mk-petroleo: #084d6e;
+  --mk-line-width: 44rem;
+  --mk-radius: 8px;
+
+  /* Tipografia */
+  --font-text-theme: "Inter", "IBM Plex Sans", "Source Sans 3", "Noto Sans",
+    system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, sans-serif;
+  --font-interface-theme: "Inter", "IBM Plex Sans", "Noto Sans", system-ui,
+    -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "Fira Code", "IBM Plex Mono",
+    "Cascadia Code", "DejaVu Sans Mono", ui-monospace, monospace;
+
+  --line-height-normal: 1.7;
+  --line-height-tight: 1.3;
+  --file-line-width: var(--mk-line-width);
+
+  /* Títulos */
+  --h1-size: 1.95em;
+  --h2-size: 1.55em;
+  --h3-size: 1.28em;
+  --h4-size: 1.12em;
+  --h5-size: 1em;
+  --h6-size: 0.92em;
+  --h1-weight: 650;
+  --h2-weight: 620;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  --h1-line-height: 1.25;
+  --h2-line-height: 1.3;
+  --heading-spacing: 1.6em;
+  --inline-title-size: var(--h1-size);
+  --inline-title-weight: 700;
+
+  /* Formas */
+  --radius-s: calc(var(--mk-radius) * 0.5);
+  --radius-m: var(--mk-radius);
+  --radius-l: calc(var(--mk-radius) * 1.5);
+  --radius-xl: calc(var(--mk-radius) * 2);
+  --button-radius: var(--radius-m);
+  --input-radius: var(--radius-m);
+  --callout-radius: var(--radius-m);
+  --code-radius: var(--radius-m);
+  --checkbox-radius: var(--radius-s);
+  --tag-radius: 999px;
+
+  /* Bordas finas e discretas */
+  --border-width: 1px;
+  --divider-width: 1px;
+  --tab-stacked-shadow: none;
+
+  /* Tags */
+  --tag-padding-x: 0.6em;
+  --tag-padding-y: 0.15em;
+  --tag-size: 0.82em;
+  --tag-weight: 500;
+  --tag-decoration: none;
+
+  /* Listas e citações */
+  --list-indent: 1.9em;
+  --list-spacing: 0.15em;
+  --blockquote-border-thickness: 3px;
+
+  /* Tabelas */
+  --table-header-weight: 600;
+  --table-border-width: 1px;
+
+  /* Transições suaves */
+  --mk-transition: 160ms ease;
+}
+
+/* ================================================================
+   2. Modo claro
+   ================================================================ */
+
+.theme-light {
+  --accent-h: 199;
+  --accent-s: 87%;
+  --accent-l: 23%;
+
+  --mk-accent: #084d6e;
+  --mk-accent-hover: #0b5f86;
+  --mk-accent-soft: rgba(8, 77, 110, 0.08);
+  --mk-accent-softer: rgba(8, 77, 110, 0.05);
+  --mk-accent-line: rgba(8, 77, 110, 0.28);
+
+  /* Superfícies */
+  --background-primary: #fbfcfd;
+  --background-primary-alt: #f4f7f9;
+  --background-secondary: #f2f5f7;
+  --background-secondary-alt: #e9eef1;
+  --background-modifier-border: #e0e6ea;
+  --background-modifier-border-hover: #cdd6dc;
+  --background-modifier-border-focus: var(--mk-accent-line);
+  --background-modifier-hover: rgba(8, 77, 110, 0.06);
+  --background-modifier-active-hover: rgba(8, 77, 110, 0.11);
+  --background-modifier-form-field: #ffffff;
+  --background-modifier-success: #2f7d5b;
+  --background-modifier-error: #b23b3b;
+
+  /* Texto */
+  --text-normal: #1c2930;
+  --text-muted: #56666f;
+  --text-faint: #8b989f;
+  --text-on-accent: #ffffff;
+  --text-accent: var(--mk-accent);
+  --text-accent-hover: var(--mk-accent-hover);
+  --text-selection: rgba(8, 77, 110, 0.16);
+  --text-highlight-bg: rgba(250, 214, 120, 0.45);
+  --text-error: #b23b3b;
+  --text-success: #2f7d5b;
+  --text-warning: #a5670c;
+
+  /* Interação */
+  --interactive-normal: #ffffff;
+  --interactive-hover: #f1f4f6;
+  --interactive-accent: var(--mk-accent);
+  --interactive-accent-hover: var(--mk-accent-hover);
+
+  /* Títulos */
+  --mk-heading: #0f3447;
+
+  /* Código */
+  --code-background: #f1f4f6;
+  --code-normal: #24343c;
+  --code-comment: #8b989f;
+  --code-keyword: #084d6e;
+  --code-function: #7a4ea3;
+  --code-string: #2f7d5b;
+  --code-value: #b4561f;
+  --code-property: #1c6f94;
+  --code-tag: #b23b3b;
+  --code-operator: #56666f;
+  --code-punctuation: #6c7a82;
+  --code-important: #a5670c;
+
+  /* Barra de rolagem */
+  --scrollbar-thumb-bg: rgba(28, 41, 48, 0.14);
+  --scrollbar-active-thumb-bg: rgba(8, 77, 110, 0.35);
+
+  /* Gráfico */
+  --graph-node: #8b989f;
+  --graph-node-focused: var(--mk-accent);
+  --graph-line: #d6dee3;
+
+  --shadow-s: 0 1px 2px rgba(15, 52, 71, 0.06), 0 1px 3px rgba(15, 52, 71, 0.05);
+  --shadow-l: 0 8px 28px rgba(15, 52, 71, 0.12), 0 2px 6px rgba(15, 52, 71, 0.06);
+}
+
+/* ================================================================
+   3. Modo escuro
+   ================================================================ */
+
+.theme-dark {
+  --accent-h: 199;
+  --accent-s: 87%;
+  --accent-l: 23%;
+
+  /* O azul petróleo puro é escuro demais para texto sobre fundo escuro;
+     ele permanece nos preenchimentos, e um tom mais claro do mesmo
+     matiz é usado para links e destaques legíveis. */
+  --mk-accent: #4fa3c7;
+  --mk-accent-hover: #74b9d6;
+  --mk-accent-fill: #084d6e;
+  --mk-accent-fill-hover: #0b5f86;
+  --mk-accent-soft: rgba(79, 163, 199, 0.12);
+  --mk-accent-softer: rgba(79, 163, 199, 0.07);
+  --mk-accent-line: rgba(79, 163, 199, 0.35);
+
+  /* Superfícies */
+  --background-primary: #131a1e;
+  --background-primary-alt: #172025;
+  --background-secondary: #0f1518;
+  --background-secondary-alt: #0b1013;
+  --background-modifier-border: #232f36;
+  --background-modifier-border-hover: #31404a;
+  --background-modifier-border-focus: var(--mk-accent-line);
+  --background-modifier-hover: rgba(79, 163, 199, 0.08);
+  --background-modifier-active-hover: rgba(79, 163, 199, 0.14);
+  --background-modifier-form-field: #0f1518;
+  --background-modifier-success: #3f9a73;
+  --background-modifier-error: #d06060;
+
+  /* Texto */
+  --text-normal: #d9e2e7;
+  --text-muted: #98a9b2;
+  --text-faint: #66767f;
+  --text-on-accent: #ffffff;
+  --text-accent: var(--mk-accent);
+  --text-accent-hover: var(--mk-accent-hover);
+  --text-selection: rgba(79, 163, 199, 0.24);
+  --text-highlight-bg: rgba(224, 182, 82, 0.28);
+  --text-error: #e07a7a;
+  --text-success: #6cc29b;
+  --text-warning: #e0b052;
+
+  /* Interação */
+  --interactive-normal: #1b252b;
+  --interactive-hover: #222e35;
+  --interactive-accent: var(--mk-accent-fill);
+  --interactive-accent-hover: var(--mk-accent-fill-hover);
+
+  /* Títulos */
+  --mk-heading: #8cc6de;
+
+  /* Código */
+  --code-background: #0f1518;
+  --code-normal: #cfd9de;
+  --code-comment: #66767f;
+  --code-keyword: #6db8d8;
+  --code-function: #c3a0e6;
+  --code-string: #84c9a6;
+  --code-value: #e8a06a;
+  --code-property: #8cc6de;
+  --code-tag: #e07a7a;
+  --code-operator: #98a9b2;
+  --code-punctuation: #7d8d96;
+  --code-important: #e0b052;
+
+  /* Barra de rolagem */
+  --scrollbar-thumb-bg: rgba(217, 226, 231, 0.12);
+  --scrollbar-active-thumb-bg: rgba(79, 163, 199, 0.4);
+
+  /* Gráfico */
+  --graph-node: #66767f;
+  --graph-node-focused: var(--mk-accent);
+  --graph-line: #263239;
+
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-l: 0 10px 30px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================================================
+   4. Variáveis derivadas (dependem do modo)
+   ================================================================ */
+
+.theme-light,
+.theme-dark {
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-muted);
+  --h6-color: var(--text-muted);
+  --inline-title-color: var(--text-normal);
+
+  --link-color: var(--mk-accent);
+  --link-color-hover: var(--mk-accent-hover);
+  --link-external-color: var(--mk-accent);
+  --link-external-color-hover: var(--mk-accent-hover);
+  --link-unresolved-color: var(--text-muted);
+  --link-unresolved-opacity: 0.8;
+  --link-unresolved-decoration-color: var(--background-modifier-border-hover);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  --tag-color: var(--mk-accent);
+  --tag-color-hover: var(--mk-accent-hover);
+  --tag-background: var(--mk-accent-soft);
+  --tag-background-hover: var(--background-modifier-active-hover);
+  --tag-border-width: 0;
+
+  --blockquote-border-color: var(--mk-accent-line);
+  --blockquote-color: var(--text-muted);
+  --blockquote-background-color: var(--mk-accent-softer);
+
+  --hr-color: var(--background-modifier-border);
+  --hr-thickness: 1px;
+
+  --checkbox-color: var(--interactive-accent);
+  --checkbox-color-hover: var(--interactive-accent-hover);
+  --checkbox-border-color: var(--background-modifier-border-hover);
+  --checkbox-border-color-hover: var(--mk-accent-line);
+  --checkbox-marker-color: var(--text-on-accent);
+  --checklist-done-color: var(--text-faint);
+  --checklist-done-decoration: line-through;
+
+  --list-marker-color: var(--text-faint);
+  --list-marker-color-hover: var(--mk-accent);
+  --list-marker-color-collapsed: var(--mk-accent);
+  --list-bullet-size: 0.32em;
+
+  --table-border-color: var(--background-modifier-border);
+  --table-header-background: var(--background-primary-alt);
+  --table-header-background-hover: var(--background-primary-alt);
+  --table-header-color: var(--text-normal);
+  --table-row-alt-background: transparent;
+  --table-row-background-hover: var(--mk-accent-softer);
+
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-hover: var(--text-normal);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --nav-item-background-active: var(--background-modifier-active-hover);
+  --nav-indentation-guide-color: var(--background-modifier-border);
+  --nav-collapse-icon-color: var(--text-faint);
+
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-background-active: var(--background-primary);
+  --tab-outline-color: var(--background-modifier-border);
+  --tab-divider-color: var(--background-modifier-border);
+
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --ribbon-background: var(--background-secondary);
+  --ribbon-background-collapsed: var(--background-primary);
+  --status-bar-background: var(--background-secondary);
+  --status-bar-border-color: var(--background-modifier-border);
+  --status-bar-text-color: var(--text-faint);
+
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --icon-color-active: var(--mk-accent);
+  --icon-color-focused: var(--text-normal);
+
+  --embed-border-left: 2px solid var(--mk-accent-line);
+  --embed-padding: 0 0 0 1.2em;
+
+  --metadata-label-text-color: var(--text-muted);
+  --metadata-border-color: var(--background-modifier-border);
+
+  --prompt-border-color: var(--background-modifier-border);
+  --modal-border-color: var(--background-modifier-border);
+}
+
+/* ================================================================
+   5. Texto e títulos
+   ================================================================ */
+
+.markdown-rendered,
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-feature-settings: "kern", "liga", "calt";
+  -webkit-font-smoothing: antialiased;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.HyperMD-header,
+.inline-title {
+  letter-spacing: -0.012em;
+}
+
+/* Títulos em azul petróleo (opção ativa por padrão) */
+body.mk-heading-accent {
+  --h1-color: var(--mk-heading);
+  --h2-color: var(--mk-heading);
+  --h3-color: var(--mk-heading);
+}
+
+/* Traço fino sob o H1 */
+body.mk-h1-rule .markdown-rendered h1::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-top: 0.45em;
+  border-radius: 2px;
+  background-color: var(--interactive-accent);
+}
+
+/* Título do arquivo: discreto e elegante */
+.inline-title {
+  margin-bottom: 0.6em;
+}
+
+/* Negrito e itálico */
+.markdown-rendered strong,
+.cm-strong {
+  font-weight: 650;
+  color: var(--text-normal);
+}
+
+/* Marca-texto */
+.markdown-rendered mark,
+.cm-highlight {
+  border-radius: 3px;
+  padding: 0 0.15em;
+  color: inherit;
+}
+
+/* Linha horizontal */
+.markdown-rendered hr {
+  margin: 2.4em 0;
+}
+
+/* ================================================================
+   6. Links
+   ================================================================ */
+
+.markdown-rendered a,
+.cm-hmd-internal-link,
+.cm-link,
+.cm-url {
+  transition: color var(--mk-transition);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* ================================================================
+   7. Citações
+   ================================================================ */
+
+.markdown-rendered blockquote {
+  padding: 0.6em 1.2em;
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  font-style: normal;
+}
+
+/* ================================================================
+   8. Código
+   ================================================================ */
+
+.markdown-rendered code {
+  padding: 0.12em 0.4em;
+  border-radius: var(--radius-s);
+  font-size: 0.87em;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--background-modifier-border);
+  padding: 1em 1.2em;
+}
+
+.markdown-rendered pre code {
+  border: none;
+  padding: 0;
+  font-size: 0.86em;
+}
+
+.cm-s-obsidian span.cm-inline-code {
+  border-radius: var(--radius-s);
+  font-size: 0.87em;
+}
+
+/* ================================================================
+   9. Tabelas
+   ================================================================ */
+
+.markdown-rendered table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--table-border-color);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+  border: none;
+  border-bottom: 1px solid var(--table-border-color);
+  padding: 0.55em 0.9em;
+}
+
+.markdown-rendered tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-rendered th {
+  text-align: left;
+  font-size: 0.92em;
+  color: var(--text-muted);
+  text-transform: none;
+}
+
+.markdown-rendered tbody tr {
+  transition: background-color var(--mk-transition);
+}
+
+/* ================================================================
+   10. Chamadas (callouts)
+   ================================================================ */
+
+.callout {
+  --callout-border-width: 0;
+  --callout-padding: 0.85em 1.1em;
+  --callout-title-weight: 600;
+  border-left: 3px solid rgba(var(--callout-color), 0.7);
+  background-color: rgba(var(--callout-color), 0.07);
+}
+
+.theme-light .callout[data-callout="note"],
+.theme-light .callout[data-callout="info"],
+.theme-light .callout[data-callout="abstract"],
+.theme-light .callout[data-callout="summary"],
+.theme-light .callout[data-callout="tldr"] {
+  --callout-color: 8, 77, 110;
+}
+
+.theme-dark .callout[data-callout="note"],
+.theme-dark .callout[data-callout="info"],
+.theme-dark .callout[data-callout="abstract"],
+.theme-dark .callout[data-callout="summary"],
+.theme-dark .callout[data-callout="tldr"] {
+  --callout-color: 79, 163, 199;
+}
+
+/* ================================================================
+   11. Tags
+   ================================================================ */
+
+a.tag,
+.cm-hashtag {
+  transition: background-color var(--mk-transition), color var(--mk-transition);
+}
+
+/* No modo de edição, o "#" e o nome da tag são elementos separados */
+.cm-hashtag.cm-hashtag-begin {
+  border-top-left-radius: var(--tag-radius);
+  border-bottom-left-radius: var(--tag-radius);
+  padding-left: var(--tag-padding-x);
+}
+
+.cm-hashtag.cm-hashtag-end {
+  border-top-right-radius: var(--tag-radius);
+  border-bottom-right-radius: var(--tag-radius);
+  padding-right: var(--tag-padding-x);
+}
+
+/* ================================================================
+   12. Interface: barras laterais, abas e barra de status
+   ================================================================ */
+
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  background-color: var(--background-secondary);
+}
+
+.nav-file-title,
+.nav-folder-title,
+.tree-item-self {
+  border-radius: var(--radius-s);
+  transition: background-color var(--mk-transition), color var(--mk-transition);
+}
+
+/* Arquivo ativo: marca discreta em azul petróleo */
+.nav-file-title.is-active,
+.tree-item-self.is-active {
+  box-shadow: inset 2px 0 0 var(--interactive-accent);
+}
+
+/* Abas: sem sombras, com sublinhado fino na aba ativa */
+.workspace-tab-header {
+  transition: color var(--mk-transition);
+}
+
+.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--interactive-accent);
+}
+
+.workspace-tab-header-inner {
+  position: relative;
+}
+
+/* Barra de status mais leve */
+.status-bar {
+  font-size: var(--font-ui-smaller);
+  border-top-left-radius: var(--radius-m);
+}
+
+/* ================================================================
+   13. Botões, campos e controles
+   ================================================================ */
+
+button,
+.clickable-icon,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  transition: background-color var(--mk-transition),
+    border-color var(--mk-transition), box-shadow var(--mk-transition);
+}
+
+button.mod-cta {
+  font-weight: 550;
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px var(--mk-accent-soft);
+}
+
+.checkbox-container.is-enabled {
+  background-color: var(--interactive-accent);
+}
+
+/* ================================================================
+   14. Janelas, menus e paleta de comandos
+   ================================================================ */
+
+.modal,
+.prompt,
+.menu,
+.suggestion-container {
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-l);
+}
+
+.suggestion-item.is-selected,
+.menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: var(--background-modifier-hover);
+}
+
+.suggestion-highlight {
+  color: var(--mk-accent);
+  font-weight: 600;
+}
+
+/* ================================================================
+   15. Barra de rolagem fina
+   ================================================================ */
+
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 10px;
+}
+
+/* ================================================================
+   16. Modo foco (opcional)
+   ================================================================ */
+
+body.mk-focus-mode .workspace-ribbon,
+body.mk-focus-mode .mod-left-split,
+body.mk-focus-mode .mod-right-split,
+body.mk-focus-mode .status-bar {
+  opacity: 0.35;
+  transition: opacity 240ms ease;
+}
+
+body.mk-focus-mode .workspace-ribbon:hover,
+body.mk-focus-mode .mod-left-split:hover,
+body.mk-focus-mode .mod-right-split:hover,
+body.mk-focus-mode .status-bar:hover {
+  opacity: 1;
+}
+
+/* ================================================================
+   17. Impressão e exportação em PDF
+   ================================================================ */
+
+@media print {
+  .markdown-rendered h1,
+  .markdown-rendered h2,
+  .markdown-rendered h3 {
+    color: #084d6e;
+  }
+
+  .markdown-rendered blockquote {
+    background: none;
+  }
+}

@@ -6,5 +6,14 @@
   "retroma-obsidian-theme@@nav-item-title-txt-wrapping": "rtm-ss-nav-item-title-txt-unwrap-hover",
   "retroma-obsidian-theme@@rtm-nav-item-title-wrapping": "nowrap",
   "retroma-obsidian-theme@@rtm-nav-file-title-deco-style": "solid",
-  "retroma-obsidian-theme@@nav-file-type-selection": "default"
+  "retroma-obsidian-theme@@nav-file-type-selection": "default",
+  "minimal-edge-settings@@background-theme": "eclipse-theme",
+  "minimal-edge-settings@@titlebar-button-style": "titlebar-default-style",
+  "minimal-edge-settings@@font-style": "var(--font-text)",
+  "minimal-edge-settings@@hide-folder-icons": false,
+  "minimal-edge-settings@@hide-file-icons": false,
+  "mp-theme@@mode-switcher-off": false,
+  "minimalistk@@mk-heading-accent": true,
+  "minimalistk@@mk-h1-rule": true,
+  "minimalistk@@mk-focus-mode": false
 }
