@@ -1,0 +1,10 @@
+{
+  "retroma-obsidian-theme@@rtm-ss-nav-item-unrainbow": true,
+  "retroma-obsidian-theme@@rtm-nav-folder-pane-content-bg@@light": "#7BC0E200",
+  "retroma-obsidian-theme@@rtm-ss-nav-folder-pane-header-simple": false,
+  "retroma-obsidian-theme@@rtm-ss-nav-folder-pane-content-simple": false,
+  "retroma-obsidian-theme@@nav-item-title-txt-wrapping": "rtm-ss-nav-item-title-txt-unwrap-hover",
+  "retroma-obsidian-theme@@rtm-nav-item-title-wrapping": "nowrap",
+  "retroma-obsidian-theme@@rtm-nav-file-title-deco-style": "solid",
+  "retroma-obsidian-theme@@nav-file-type-selection": "default"
+}

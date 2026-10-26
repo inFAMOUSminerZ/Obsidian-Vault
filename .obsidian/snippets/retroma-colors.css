@@ -1,0 +1,327 @@
+/* 1. RESET GLOBAL INTERFACE FILTERS */
+body, .app-container, .workspace {
+    filter: none !important;
+}
+
+/* 2. MAIN CANVAS (STARK WHITE) */
+.view-content,
+.markdown-source-view,
+.markdown-reading-view,
+.workspace-leaf-content,
+.workspace-leaf,
+.markdown-preview-view,
+.cm-sizer,
+.cm-content,
+.workspace-leaf-content[data-type="calendar"],
+.workspace-leaf-content[data-type="localgraph"],
+.workspace-leaf-content div {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+}
+
+/* PANELS (NOTION GRAY) */
+.app-container,
+body.theme-light .app-container,
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split,
+.workspace-ribbon,
+.side-dock-ribbon,
+.status-bar,
+.tab-header-container,
+.workspace-tab-header,
+.workspace-tab-header-container,
+.nav-files-container,
+.view-header {
+    background-color: #f7f7f5 !important;
+    background: #f7f7f5 !important;
+    border-color: #e9e9e6 !important;
+}
+
+.workspace-leaf, .workspace-split {
+    border: 1px solid #e9e9e6 !important;
+}
+
+/* 3. NOTION TYPOGRAPHY */
+:root, body.theme-light {
+    --text-normal: #37352f !important;
+    --text-muted: #787774 !important;
+    --text-faint: #9b9a97 !important;
+    --text-accent: #37352f !important;
+    --interactive-accent: #e9e9e6 !important;
+    --rtm-bg-primary: #ffffff !important;
+    --rtm-bg-secondary: #f7f7f5 !important;
+    --rtm-border-color: #e9e9e6 !important;
+}
+
+/* 4. UNIFIED CODE BLOCKS */
+.markdown-rendered pre,
+.cm-gfm-codeblock,
+.cm-embed-block:has(.html-embed) {
+    background-color: rgba(35, 131, 226, 0.07) !important;
+    background: rgba(35, 131, 226, 0.07) !important;
+    border: 1px solid rgba(35, 131, 226, 0.25) !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    padding: 12px !important;
+}
+
+div.hypermd-codeblock,
+pre code {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a5cff !important;
+}
+
+/* 5. BUTTONS */
+.nav-header .clickable-icon,
+.clickable-icon,
+.workspace-tab-header-new-tab,
+.tab-header-control,
+button,
+[class*="button"],
+.nav-buttons-container .clickable-icon {
+    background-color: #f1f1ef !important;
+    background: #f1f1ef !important;
+    border: 1px solid #e9e9e6 !important;
+    color: #37352f !important;
+    box-shadow: none !important;
+}
+
+.nav-header .clickable-icon:hover,
+.clickable-icon:hover,
+button:hover,
+[class*="button"]:hover {
+    background-color: #e9e9e6 !important;
+    background: #e9e9e6 !important;
+}
+
+/* 6. FOLDER / FILE BASICS */
+.nav-folder,
+.nav-folder-children {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.nav-folder-title-content {
+    background: transparent !important;
+}
+
+/* 7. TOP BAR: title bar stays TRANSPARENT so tabs show through; grey goes on the tab strip */
+body {
+    --titlebar-background: transparent !important;
+    --titlebar-background-focused: transparent !important;
+}
+
+body .titlebar,
+body .titlebar-inner {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+body .mod-root .workspace-tab-header-container,
+body .mod-root .workspace-tab-header-container-inner {
+    background: #dcdcd9 !important;
+    background-color: #dcdcd9 !important;
+    border-color: #c8c8c4 !important;
+}
+
+body .mod-root .workspace-tab-header {
+    background: #e9e9e6 !important;
+    background-color: #e9e9e6 !important;
+    border: 1px solid #c8c8c4 !important;
+    border-radius: 6px 6px 0 0 !important;
+}
+
+body .mod-root .workspace-tab-header.is-active {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+body .mod-root .workspace-tab-header-inner-title {
+    color: #787774 !important;
+}
+body .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: #37352f !important;
+}
+
+/* 8. FILE EXPLORER: UNIFORM BLUE (boxes, outlines, titles, icons) */
+body .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title,
+body .workspace-leaf-content[data-type="file-explorer"] .nav-file-title,
+body .nav-files-container .nav-folder-title,
+body .nav-files-container .nav-folder .nav-folder-title,
+body .nav-files-container .nav-folder-children .nav-folder-title,
+body .nav-files-container .nav-file-title {
+    background: rgba(35, 131, 226, 0.08) !important;
+    background-color: rgba(35, 131, 226, 0.08) !important;
+    border: 1px solid rgba(35, 131, 226, 0.25) !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    outline: none !important;
+    margin-bottom: 6px !important;
+}
+
+/* titles */
+body .nav-files-container .nav-folder-title,
+body .nav-files-container .nav-folder-title-content,
+body .nav-files-container .nav-file-title,
+body .nav-files-container .nav-file-title-content,
+body .nav-files-container .nav-file-title.is-active,
+body .nav-files-container .nav-file-title.is-active .nav-file-title-content {
+    color: #2383e2 !important;
+    -webkit-text-fill-color: #2383e2 !important;
+}
+
+/* outer boxes and dashed indent lines */
+body .nav-files-container .nav-folder,
+body .nav-files-container .nav-folder-children {
+    border-color: rgba(35, 131, 226, 0.25) !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* icons */
+body .nav-files-container .nav-folder-title svg,
+body .nav-files-container .nav-folder-title .collapse-icon {
+    color: #2383e2 !important;
+    fill: #2383e2 !important;
+    stroke: #2383e2 !important;
+}
+
+/* hover */
+body .nav-files-container .nav-folder-title:hover,
+body .nav-files-container .nav-file-title:hover {
+    background-color: rgba(35, 131, 226, 0.15) !important;
+}
+/* ===== 9. TOP ROW: ONE UNIFORM GREY ===== */
+body .workspace-tabs.mod-top .workspace-tab-header-container,
+body .workspace-tabs.mod-top .workspace-tab-header-container-inner,
+body .mod-root .workspace-tab-header-spacer,
+body .mod-root .workspace-tab-header-new-tab,
+body .mod-root .workspace-tab-header-tab-list,
+body .mod-root .workspace-tab-container-before,
+body .mod-root .workspace-tab-container-after,
+body .titlebar-button-container {
+    background: #dcdcd9 !important;
+    background-color: #dcdcd9 !important;
+    border-color: #dcdcd9 !important;
+}
+
+/* + and dropdown buttons blend into the bar */
+body .mod-root .workspace-tab-header-new-tab .clickable-icon,
+body .mod-root .workspace-tab-header-tab-list .clickable-icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+/* ===== 10. SIDEBAR TAB STRIPS + WINDOW BUTTONS: MATCH TOP GREY ===== */
+body .mod-left-split .workspace-tab-header-container,
+body .mod-left-split .workspace-tab-header-container-inner,
+body .mod-right-split .workspace-tab-header-container,
+body .mod-right-split .workspace-tab-header-container-inner,
+body .mod-left-split .workspace-tabs .workspace-tab-header-container,
+body .mod-right-split .workspace-tabs .workspace-tab-header-container,
+body .sidebar-toggle-button,
+body .titlebar-button-container,
+body .titlebar-button-container.mod-left,
+body .titlebar-button-container.mod-right {
+    background: #dcdcd9 !important;
+    background-color: #dcdcd9 !important;
+    border-color: #dcdcd9 !important;
+}
+
+/* window minimize / maximize / close buttons blend in */
+body .titlebar-button,
+body .titlebar-button-container .clickable-icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+/* ===== 11. GRAPH: BLUE BACKGROUND ===== */
+body .workspace-leaf-content[data-type="localgraph"],
+body .workspace-leaf-content[data-type="localgraph"] .view-content,
+body .workspace-leaf-content[data-type="localgraph"] .view-content div,
+body .workspace-leaf-content[data-type="graph"],
+body .workspace-leaf-content[data-type="graph"] .view-content,
+body .workspace-leaf-content[data-type="graph"] .view-content div {
+    background: linear-gradient(180deg, rgba(35, 131, 226, 0.20), rgba(35, 131, 226, 0.07)) !important;
+}
+
+body .workspace-leaf-content[data-type="localgraph"] canvas,
+body .workspace-leaf-content[data-type="graph"] canvas {
+    background: transparent !important;
+}
+
+/* ===== 12. CALENDAR: BLUE GRADIENTS ===== */
+/* regular days */
+body .workspace-leaf-content[data-type="calendar"] #calendar-container .day {
+    background: linear-gradient(180deg, rgba(35, 131, 226, 0.14), rgba(35, 131, 226, 0.04)) !important;
+    border: 1px solid rgba(35, 131, 226, 0.25) !important;
+    border-radius: 6px !important;
+    color: #37352f !important;
+}
+
+/* days from the previous / next month */
+body .workspace-leaf-content[data-type="calendar"] #calendar-container .day.adjacent-month {
+    background: linear-gradient(180deg, rgba(35, 131, 226, 0.06), rgba(35, 131, 226, 0.02)) !important;
+    color: #9b9a97 !important;
+}
+
+/* weekday header + week numbers */
+body .workspace-leaf-content[data-type="calendar"] #calendar-container th,
+body .workspace-leaf-content[data-type="calendar"] #calendar-container .week-num {
+    background: linear-gradient(180deg, rgba(35, 131, 226, 0.30), rgba(35, 131, 226, 0.18)) !important;
+    color: #1a3d73 !important;
+}
+
+/* today */
+body .workspace-leaf-content[data-type="calendar"] #calendar-container .day.today {
+    background: linear-gradient(180deg, #2383e2, #5aa5ee) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* selected day */
+body .workspace-leaf-content[data-type="calendar"] #calendar-container .day.active {
+    background: linear-gradient(180deg, rgba(35, 131, 226, 0.45), rgba(35, 131, 226, 0.25)) !important;
+    color: #1a3d73 !important;
+}
+
+/* hover */
+body .workspace-leaf-content[data-type="calendar"] #calendar-container .day:hover {
+    background: linear-gradient(180deg, rgba(35, 131, 226, 0.35), rgba(35, 131, 226, 0.18)) !important;
+}
+/* ===== 13. NOTE HEADINGS: BLUE ===== */
+body {
+    --h1-color: #2383e2 !important;
+    --h2-color: #2383e2 !important;
+    --h3-color: #2383e2 !important;
+    --h4-color: #2383e2 !important;
+    --h5-color: #2383e2 !important;
+    --h6-color: #2383e2 !important;
+}
+
+body .markdown-preview-view h1,
+body .markdown-preview-view h2,
+body .markdown-preview-view h3,
+body .markdown-preview-view h4,
+body .markdown-preview-view h5,
+body .markdown-preview-view h6,
+body .markdown-rendered h1,
+body .markdown-rendered h2,
+body .markdown-rendered h3,
+body .markdown-rendered h4,
+body .markdown-rendered h5,
+body .markdown-rendered h6,
+body .inline-title,
+body .HyperMD-header,
+body .cm-header,
+body .cm-header-1,
+body .cm-header-2,
+body .cm-header-3,
+body .cm-header-4,
+body .cm-header-5,
+body .cm-header-6 {
+    color: #2383e2 !important;
+    -webkit-text-fill-color: #2383e2 !important;
+}

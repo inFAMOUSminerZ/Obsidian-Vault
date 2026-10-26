@@ -6,7 +6,6 @@
       {
         "id": "6181486391559d6c",
         "type": "tabs",
-        "dimension": 54.568527918781726,
         "children": [
           {
             "id": "f7ba17155e817f7b",
@@ -14,29 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Games Developement/Object Oriented Developement/Inheritance.md",
+                "file": "Computer Games Developement/Object Oriented Developement/Constructors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Inheritance"
-            }
-          }
-        ]
-      },
-      {
-        "id": "6782c81ba9259ed0",
-        "type": "tabs",
-        "dimension": 45.431472081218274,
-        "children": [
-          {
-            "id": "312ea79b322af345",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Constructors"
             }
           }
         ]
@@ -101,15 +83,33 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 347.5
   },
   "right": {
     "id": "d8792ff7919ca83e",
     "type": "split",
     "children": [
       {
+        "id": "69295d7ee32530c1",
+        "type": "tabs",
+        "dimension": 39.761431411530815,
+        "children": [
+          {
+            "id": "35ff2190fbad67d8",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      },
+      {
         "id": "41d66cc116cfe83c",
         "type": "tabs",
+        "dimension": 60.238568588469185,
         "children": [
           {
             "id": "25d64ae2168f4cd1",
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "Computer Games Developement/Object Oriented Developement/Inheritance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "Computer Games Developement/Object Oriented Developement/Inheritance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -160,6 +160,21 @@
             }
           },
           {
+            "id": "5f6a97c1f8b9cb0a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Computer Games Developement/Object Oriented Developement/Constructors.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
             "id": "25f1ceeb28bf48f1",
             "type": "leaf",
             "state": {
@@ -174,48 +189,46 @@
             }
           },
           {
-            "id": "5f6a97c1f8b9cb0a",
+            "id": "312ea79b322af345",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "Welcome.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 328.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "daily-notes:Open today's daily note": false,
+      "bases:Create new base": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "f7ba17155e817f7b",
+  "active": "1cb70962266bcd17",
   "lastOpenFiles": [
-    "Computer Games Developement/Object Oriented Developement/Method Overloading.md",
-    "Computer Games Developement/Object Oriented Developement/Inheritance.md",
-    "Computer Games Developement/Object Oriented Developement/Getters and Setters.md",
-    "Computer Games Developement/Object Oriented Developement/Generic Lists.md",
-    "Computer Games Developement/Object Oriented Developement/Encapsulation.md",
     "Computer Games Developement/Object Oriented Developement/Constructors.md",
     "Master Attachments/Pasted image 20261025172138.png",
     "D&D/Engrimoore/Discord Server/DM Quests/At His Door - Part Two.md",
+    "Computer Games Developement/Object Oriented Developement/Getters and Setters.md",
+    "Computer Games Developement/Object Oriented Developement/Inheritance.md",
+    "Computer Games Developement/Object Oriented Developement/Method Overloading.md",
+    "Untitled.canvas",
+    "2026-10-25.md",
+    "Computer Games Developement/Object Oriented Developement/Generic Lists.md",
+    "Computer Games Developement/Object Oriented Developement/Encapsulation.md",
     "Master Attachments/Pasted image 20261025172422.png",
     "Master Attachments",
     "Master Attachments/Pasted image 20261025172254.png",

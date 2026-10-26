@@ -1,4 +1,8 @@
 {
   "theme": "moonstone",
-  "accentColor": "#0000ff"
+  "accentColor": "#0000ff",
+  "cssTheme": "Retroma",
+  "enabledCssSnippets": [
+    "retroma-colors"
+  ]
 }
