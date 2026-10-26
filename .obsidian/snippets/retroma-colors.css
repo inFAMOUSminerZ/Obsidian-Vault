@@ -325,3 +325,56 @@ body .cm-header-6 {
     color: #2383e2 !important;
     -webkit-text-fill-color: #2383e2 !important;
 }
+
+/* ===== 14. LINKS + TAGS: LIGHT BLUE ===== */
+body {
+    --link-color: #5aa5ee !important;
+    --link-color-hover: #2383e2 !important;
+    --link-unresolved-color: #8fc0f2 !important;
+    --link-external-color: #5aa5ee !important;
+    --link-external-color-hover: #2383e2 !important;
+    --tag-color: #3b8fe6 !important;
+}
+
+/* links in reading view */
+body .markdown-preview-view a,
+body .markdown-rendered a,
+body .markdown-rendered a.internal-link,
+body .markdown-rendered a.external-link,
+body a.internal-link,
+body a.external-link {
+    color: #5aa5ee !important;
+    -webkit-text-fill-color: #5aa5ee !important;
+    text-decoration-color: #5aa5ee !important;
+}
+
+/* links in the editor (live preview / source) */
+body .cm-hmd-internal-link,
+body .cm-hmd-internal-link .cm-underline,
+body .cm-link,
+body .cm-url,
+body .cm-formatting-link,
+body .cm-formatting-link-string {
+    color: #5aa5ee !important;
+    -webkit-text-fill-color: #5aa5ee !important;
+    text-decoration-color: #5aa5ee !important;
+}
+
+/* tags */
+body a.tag,
+body .cm-hashtag,
+body .cm-hashtag-begin,
+body .cm-hashtag-end {
+    color: #3b8fe6 !important;
+    -webkit-text-fill-color: #3b8fe6 !important;
+    background-color: rgba(35, 131, 226, 0.12) !important;
+    border-color: rgba(35, 131, 226, 0.3) !important;
+}
+
+/* hover */
+body .markdown-rendered a:hover,
+body a.internal-link:hover,
+body .cm-hmd-internal-link:hover {
+    color: #2383e2 !important;
+    -webkit-text-fill-color: #2383e2 !important;
+}

@@ -13,7 +13,7 @@ public class Test{
 		return number;
 	}
 	
-	// our setter method which equates a global variable with the local              variable, then sets the local variable to 2, without changing the global         variable
+	// our setter method which equates a global variable with the local variable, then sets the local variable to 2, without changing the global variable
 	public void setNumber(int number){
 		this.number = number;
 	}
