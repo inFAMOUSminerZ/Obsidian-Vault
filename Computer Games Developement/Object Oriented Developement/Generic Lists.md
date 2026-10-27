@@ -11,9 +11,7 @@ public class Main{
 		List<Animal> animals = new ArrayList<Animal>();
 		
 		animals.add(a);
-	
 	}
-	
 }
 ```
 

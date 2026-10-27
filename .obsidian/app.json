@@ -1,5 +1,7 @@
 {
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "Master Attachments",
-  "readableLineLength": false
+  "readableLineLength": false,
+  "propertiesInDocument": "hidden",
+  "showInlineTitle": true
 }

@@ -3,7 +3,6 @@ Constructors use blueprints (classes) to create objects. They execute some funct
 Take something like this:
 ```java 
 public class Test{
-
 	private int number = 1;
 	
 	public int getNumber(){
@@ -16,14 +15,12 @@ public class Test{
 	
 	public Test(){
 	}
-	
 }
 ```
 
 And now we add the constructor so that when we add another class with a main method and do the following:
 ```java
 public class Main{
-
 	public static void main(String[] args){
 		
 		Test t = new Test();   //This is an initialisation.
@@ -32,7 +29,6 @@ public class Main{
 		t.getNumber();
 	
 	}
-	
 }
 ```
 

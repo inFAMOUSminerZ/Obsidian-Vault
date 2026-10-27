@@ -1,0 +1,14 @@
+/* ===== BOLD TEXT: BLACK ===== */
+body, body.theme-light {
+    --bold-color: #000000 !important;
+}
+
+body .markdown-rendered strong,
+body .markdown-rendered b,
+body .markdown-preview-view strong,
+body .markdown-preview-view b,
+body .cm-strong,
+body .cm-formatting-strong {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}

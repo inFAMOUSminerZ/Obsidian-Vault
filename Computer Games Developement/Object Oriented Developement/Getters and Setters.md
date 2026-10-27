@@ -1,4 +1,4 @@
-[[Encapsulation]], [[Getters and Setters]], [[Types]], [[Constructors]]
+[[Encapsulation]], [[Types]], [[Constructors]]
 Getters and Setters are often used for encapsulation. Getters return some value using a method and setters (also called mutators) set the values of some value within your code. 
 
 For example:
@@ -13,28 +13,11 @@ public class Test{
 		return number;
 	}
 	
-	// our setter method which equates a global variable with the local variable, then sets the local variable to 2, without changing the global variable
+	// our setter method which equates a global variable with the local variable, then sets the local variable to 2, without           changing the global variable
 	public void setNumber(int number){
 		this.number = number;
 	}
-	
-}
-```
-
-To invoke the class to construct an object we need to create a constructor which is something like this:
-```java 
-public class Test{
-
-	private int number = 1;
-	
-	public int getNumber(){
-		return number;
-	}
-	
-	public void setNumber(int number){
-		this.number = number;
-	}
-	
+	// a constructor that we can call to build the object from the class
 	public Test(){
 	}
 	

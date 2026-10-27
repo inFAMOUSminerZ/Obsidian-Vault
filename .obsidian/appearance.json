@@ -1,6 +1,7 @@
 {
-  "theme": "moonstone",
-  "accentColor": "#0000ff",
-  "cssTheme": "MinimalistK",
-  "enabledCssSnippets": []
+  "cssTheme": "Border",
+  "enabledCssSnippets": [
+    "border-colors"
+  ],
+  "theme": "moonstone"
 }

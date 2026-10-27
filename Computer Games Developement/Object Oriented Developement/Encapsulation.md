@@ -6,7 +6,6 @@ public class Test{
 	public int getNumber(){
 		return number;
 	}
-	
 }
 ```
 Here we set a private int named "number" to 1 and return it in the getter. Now we need to retrieve that number to set it. This is called a **mutater**. Something like this:
@@ -22,7 +21,6 @@ public class Test{
 		this.number = number;
 		number = 2;
 	}
-	
 }
 ```
 Now if we create a new Test object with a constructor we will be able to pass a number into the **setNumber** method without accessing the data in the private int.
