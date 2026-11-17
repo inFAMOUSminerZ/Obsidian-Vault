@@ -3,5 +3,6 @@
   "enabledCssSnippets": [
     "border-colors"
   ],
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "showRibbon": true
 }

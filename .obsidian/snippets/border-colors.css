@@ -12,3 +12,57 @@ body .cm-formatting-strong {
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
 }
+/* ===== HEADINGS: BLUE BAR, NORMAL TEXT ===== */
+body {
+    --heading-blue: var(--interactive-accent, #6270f2);
+
+    --h1-color: var(--text-normal) !important;
+    --h2-color: var(--text-normal) !important;
+    --h3-color: var(--text-normal) !important;
+    --h4-color: var(--text-normal) !important;
+    --h5-color: var(--text-normal) !important;
+    --h6-color: var(--text-normal) !important;
+}
+
+/* heading text */
+body .markdown-preview-view :is(h1,h2,h3,h4,h5,h6),
+body .markdown-rendered :is(h1,h2,h3,h4,h5,h6),
+body .HyperMD-header,
+body .cm-header,
+body .cm-header-1, body .cm-header-2, body .cm-header-3,
+body .cm-header-4, body .cm-header-5, body .cm-header-6 {
+    color: var(--text-normal) !important;
+}
+
+/* # markers stay muted, as in your original screenshot */
+body .cm-formatting-header {
+    color: var(--text-faint) !important;
+}
+
+/* the bars beside each heading stay blue */
+body .markdown-preview-view :is(h1,h2,h3,h4,h5,h6),
+body .markdown-rendered :is(h1,h2,h3,h4,h5,h6),
+body .cm-line.HyperMD-header,
+body .cm-line.HyperMD-header-1, body .cm-line.HyperMD-header-2,
+body .cm-line.HyperMD-header-3, body .cm-line.HyperMD-header-4,
+body .cm-line.HyperMD-header-5, body .cm-line.HyperMD-header-6 {
+    border-left-color: var(--heading-blue) !important;
+}
+
+body .cm-line.HyperMD-header::before,
+body :is(h1,h2,h3,h4,h5,h6)::before {
+    background-color: var(--heading-blue) !important;
+    border-color: var(--heading-blue) !important;
+}
+body .markdown-rendered :not(pre) > code,
+body .markdown-rendered code:not(pre code),
+body .markdown-source-view.mod-cm6 .cm-inline-code,
+body .cm-s-obsidian span.cm-inline-code {
+    background: #d8e0e5 !important;
+    background-color: #d8e0e5 !important;
+    background-image: none !important;
+    color: #3a4a55 !important;
+    border: 1px solid #3d7be0 !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}

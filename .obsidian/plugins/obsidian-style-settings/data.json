@@ -1,25 +1,3 @@
 {
-  "retroma-obsidian-theme@@rtm-ss-nav-item-unrainbow": true,
-  "retroma-obsidian-theme@@rtm-nav-folder-pane-content-bg@@light": "#7BC0E200",
-  "retroma-obsidian-theme@@rtm-ss-nav-folder-pane-header-simple": false,
-  "retroma-obsidian-theme@@rtm-ss-nav-folder-pane-content-simple": false,
-  "retroma-obsidian-theme@@nav-item-title-txt-wrapping": "rtm-ss-nav-item-title-txt-unwrap-hover",
-  "retroma-obsidian-theme@@rtm-nav-item-title-wrapping": "nowrap",
-  "retroma-obsidian-theme@@rtm-nav-file-title-deco-style": "solid",
-  "retroma-obsidian-theme@@nav-file-type-selection": "default",
-<<<<<<< HEAD
-  "Appearance-light@@card-layout-open-light": true,
-  "Appearance-light@@theme-light-style-select": "theme-light-background-default",
-  "Appearance-light@@text-normal@@light": "#050505"
-=======
-  "minimal-edge-settings@@background-theme": "eclipse-theme",
-  "minimal-edge-settings@@titlebar-button-style": "titlebar-default-style",
-  "minimal-edge-settings@@font-style": "var(--font-text)",
-  "minimal-edge-settings@@hide-folder-icons": false,
-  "minimal-edge-settings@@hide-file-icons": false,
-  "mp-theme@@mode-switcher-off": false,
-  "minimalistk@@mk-heading-accent": true,
-  "minimalistk@@mk-h1-rule": true,
-  "minimalistk@@mk-focus-mode": false
->>>>>>> 80f29390f28eae278673ddc08ed863e679f992bb
+  "Appearance-light@@card-layout-open-light": true
 }
