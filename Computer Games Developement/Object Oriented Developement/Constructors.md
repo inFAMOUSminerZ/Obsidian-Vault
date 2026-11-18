@@ -1,3 +1,4 @@
+**Tags**: [[Method Overloading]], [[Method Overriding]]
 Constructors use blueprints (classes) to create objects. They execute some function such as setting a value or returning a value and when the constructor is called it initialises a class which has one of these constructor methods and uses the blueprint within the class to create a new object.
 
 Take something like this:

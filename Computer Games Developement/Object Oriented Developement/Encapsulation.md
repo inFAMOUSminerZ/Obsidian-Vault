@@ -1,3 +1,4 @@
+**Tags**: [[Inheritance]], [[Constructors]]
 Encapsulation is achieved by creating a private variable that stores some value. Then we have a public **getter** method. Something like so
 ```java
 public class Test{

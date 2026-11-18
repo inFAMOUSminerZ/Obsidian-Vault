@@ -1,3 +1,4 @@
+
 Types are a few things such as int or char or even String. They come in two categories, primitive and non-primitive.
 
 **Primitive:** Primitive data types are predefined by the language. They represent the building blocks of data such as doubles (fractions) or chars (individual characters) **Examples: int, char, double**.
