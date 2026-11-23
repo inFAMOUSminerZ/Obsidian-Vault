@@ -1,7 +1,8 @@
 {
   "cssTheme": "Border",
   "enabledCssSnippets": [
-    "border-colors"
+    "border-colors",
+    "pdf-print"
   ],
   "theme": "moonstone",
   "showRibbon": true

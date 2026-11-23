@@ -3,5 +3,12 @@
   "attachmentFolderPath": "Master Attachments",
   "readableLineLength": false,
   "propertiesInDocument": "hidden",
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

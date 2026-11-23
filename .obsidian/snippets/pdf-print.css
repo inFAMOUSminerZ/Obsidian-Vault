@@ -1,0 +1,9 @@
+@media print {
+  pre, code {
+    white-space: pre;
+    font-size: 0.8em;
+    tab-size: 4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

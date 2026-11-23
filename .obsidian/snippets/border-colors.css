@@ -3,6 +3,16 @@ body, body.theme-light {
     --bold-color: #000000 !important;
 }
 
+@media print {
+  pre, code {
+    tab-size: 4;
+    white-space: pre-wrap;
+    word-break: break-word;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 body .markdown-rendered strong,
 body .markdown-rendered b,
 body .markdown-preview-view strong,
